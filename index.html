@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clear Church Consulting — Clarity for Your Church's Next Chapter</title>
+<meta name="description" content="Clear Church Consulting helps pastors and ministry leaders build a clear discipleship pathway — from macro strategy to small groups and micro groups.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Color tokens */
+    --navy-950: #04162b;
+    --navy-900: #0a2850;
+    --navy-800: #123563;
+    --navy-700: #1d4278;
+    --navy-600: #2f5490;
+    --terracotta-700: #a8543a;
+    --terracotta-600: #c16b4a;
+    --terracotta-500: #cd7f5f;
+    --terracotta-200: #eccbb8;
+    --terracotta-100: #f3ded4;
+    --cream-50: #faf8f5;
+    --cream-100: #f4f0ea;
+    --slate-500: #7c88a8;
+    --slate-400: #a0a8c0;
+    --slate-300: #c8d0d8;
+    --slate-200: #dde2e8;
+    --slate-100: #eef1f4;
+    --ink-900: #1b2430;
+    --success-600: #4a7c5b;
+    --white: #ffffff;
+
+    --color-bg-page: var(--cream-50);
+    --color-bg-sunken: var(--cream-100);
+    --color-text-primary: var(--ink-900);
+    --color-text-secondary: var(--slate-500);
+    --color-text-muted: #8891a0;
+    --color-accent: var(--terracotta-600);
+    --color-accent-hover: var(--terracotta-700);
+    --color-border-default: var(--slate-200);
+    --color-border-strong: var(--slate-400);
+
+    /* Typography */
+    --font-display: 'Spectral', Georgia, serif;
+    --font-body: 'Work Sans', -apple-system, Helvetica, Arial, sans-serif;
+    --fs-h1: 52px;
+    --fs-h2: 40px;
+    --fs-h3: 28px;
+    --fs-h4: 22px;
+    --fs-body-lg: 19px;
+    --fs-body: 16px;
+    --fs-body-sm: 14px;
+    --fs-caption: 13px;
+    --lh-tight: 1.15;
+    --lh-heading: 1.25;
+    --lh-body: 1.6;
+    --ls-caps: 0.08em;
+
+    /* Spacing */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-20: 80px;
+    --space-24: 96px;
+    --container-max: 1120px;
+    --container-pad: 24px;
+
+    /* Effects */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 14px;
+    --radius-pill: 999px;
+    --shadow-sm: 0 1px 2px rgba(10,40,80,0.06);
+    --shadow-md: 0 4px 12px rgba(10,40,80,0.08), 0 1px 3px rgba(10,40,80,0.06);
+    --shadow-lg: 0 12px 32px rgba(10,40,80,0.12), 0 2px 6px rgba(10,40,80,0.06);
+    --ease-standard: cubic-bezier(.4,0,.2,1);
+    --dur-base: 200ms;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--color-bg-page);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    line-height: var(--lh-heading);
+    margin: 0;
+    font-weight: 500;
+    color: var(--navy-900);
+  }
+  a { color: var(--navy-900); }
+  a:hover { color: var(--color-accent); }
+  img { max-width: 100%; display: block; }
+  .wrap {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-pad);
+  }
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: var(--fs-caption);
+    font-weight: 600;
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  /* Buttons */
+  .btn {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 16px;
+    padding: 13px 26px;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background var(--dur-base) var(--ease-standard), color var(--dur-base) var(--ease-standard), border-color var(--dur-base) var(--ease-standard);
+  }
+  .btn-primary {
+    background: var(--navy-900);
+    color: var(--white);
+  }
+  .btn-primary:hover { background: var(--navy-800); color: var(--white); }
+  .btn-outline {
+    background: transparent;
+    color: var(--navy-900);
+    border: 1px solid var(--color-border-strong);
+  }
+  .btn-outline:hover { border-color: var(--navy-900); }
+  .btn-accent {
+    background: var(--color-accent);
+    color: var(--white);
+    width: 100%;
+    font-size: 16px;
+    padding: 14px 24px;
+  }
+  .btn-accent:hover { background: var(--color-accent-hover); color: var(--white); }
+
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px var(--container-pad);
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--navy-900);
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .logo span {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+  }
+  nav { display: flex; gap: 32px; align-items: center; }
+  nav a {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-text-primary);
+  }
+  nav a:hover { color: var(--color-accent); }
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+  .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--navy-900); margin: 5px 0; }
+
+  /* Hero */
+  .hero {
+    padding: 64px var(--container-pad) 88px;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 56px;
+  }
+  .hero-copy { flex: 1; }
+  .hero h1 {
+    font-size: var(--fs-h1);
+    line-height: var(--lh-tight);
+    margin: 16px 0 24px;
+  }
+  .hero p {
+    font-size: var(--fs-body-lg);
+    line-height: var(--lh-body);
+    color: var(--color-text-secondary);
+    max-width: 480px;
+    margin: 0 0 32px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-visual {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-mark {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, var(--navy-700), var(--navy-950));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+  }
+  .hero-mark span {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 44px;
+    color: var(--white);
+  }
+
+  /* Section base */
+  section { padding: 72px var(--container-pad); }
+  .section-inner { max-width: var(--container-max); margin: 0 auto; }
+  .section-head { max-width: 600px; margin-bottom: 40px; }
+  .section-head h2 { font-size: 34px; margin-bottom: 10px; }
+  .section-head p { color: var(--color-text-secondary); font-size: 17px; margin: 0; }
+
+  /* Pathway */
+  .pathway { background: var(--navy-900); }
+  .pathway .eyebrow { color: var(--terracotta-200); }
+  .pathway .section-head h2, .pathway .section-head p { color: var(--white); }
+  .pathway .section-head p { color: var(--slate-300); }
+  .pathway-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    counter-reset: step;
+  }
+  .pathway-step {
+    background: var(--navy-800);
+    border: 1px solid var(--navy-700);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    position: relative;
+  }
+  .pathway-step::before {
+    counter-increment: step;
+    content: counter(step);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--terracotta-200);
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid var(--terracotta-500);
+    border-radius: 50%;
+    margin-bottom: 16px;
+  }
+  .pathway-step h3 {
+    font-size: 20px;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .pathway-step p {
+    font-size: 15px;
+    color: var(--slate-300);
+    margin: 0;
+    line-height: 1.6;
+  }
+  .pathway-arrow {
+    display: none;
+  }
+
+  /* Services */
+  .tag {
+    display: inline-block;
+    font-size: var(--fs-caption);
+    font-weight: 600;
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+    color: var(--color-accent);
+    background: var(--terracotta-100);
+    border-radius: var(--radius-pill);
+    padding: 4px 12px;
+    margin-bottom: 14px;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .card {
+    background: var(--white);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--dur-base) var(--ease-standard), border-color var(--dur-base) var(--ease-standard);
+  }
+  .card:hover { box-shadow: var(--shadow-md); border-color: var(--color-accent); }
+  .card h3 { font-size: 20px; margin-bottom: 8px; }
+  .card p { font-size: 15px; color: var(--color-text-secondary); margin: 0; line-height: 1.6; }
+
+  /* About */
+  .about { background: var(--white); }
+  .about-inner {
+    display: flex;
+    gap: 56px;
+    align-items: flex-start;
+  }
+  .about-inner .about-copy { flex: 1.3; }
+  .about-inner .about-copy p { color: var(--color-text-secondary); font-size: 17px; line-height: 1.7; }
+  .about-stats {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .stat {
+    background: var(--cream-100);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+  }
+  .stat .num {
+    font-family: var(--font-display);
+    font-size: 32px;
+    color: var(--navy-900);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .stat .label {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+  }
+
+  /* Testimonial */
+  .testimonial { background: var(--cream-100); text-align: center; }
+  .testimonial-inner { max-width: 720px; margin: 0 auto; }
+  .testimonial blockquote {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-style: italic;
+    color: var(--navy-900);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .testimonial cite {
+    display: block;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-top: 20px;
+  }
+
+  /* Contact */
+  .contact-inner {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+  }
+  .contact-copy { flex: 1; }
+  .contact-copy p {
+    font-size: 17px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    max-width: 420px;
+    margin: 12px 0 20px;
+  }
+  .contact-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .contact-tags .tag { margin-bottom: 0; }
+  .contact-form-card {
+    flex: 0 0 380px;
+    background: var(--white);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    box-shadow: var(--shadow-md);
+  }
+  .field { margin-bottom: 16px; }
+  .field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-bottom: 6px;
+  }
+  .field input, .field textarea {
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 15px;
+    padding: 11px 14px;
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    background: var(--cream-50);
+    color: var(--color-text-primary);
+  }
+  .field input:focus, .field textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    background: var(--white);
+  }
+  .field textarea { resize: vertical; min-height: 80px; }
+  .form-note {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    margin-top: 12px;
+    text-align: center;
+  }
+  .thank-you {
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .thank-you.visible { display: block; }
+  .thank-you-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--success-600);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 24px;
+  }
+  .thank-you h3 { font-size: 20px; margin-bottom: 8px; }
+  .thank-you p { font-size: 15px; color: var(--color-text-secondary); margin: 0; }
+
+  /* Footer */
+  footer {
+    background: var(--navy-950);
+    color: var(--slate-300);
+    padding: var(--space-12) var(--container-pad);
+  }
+  .footer-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .footer-logo {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--white);
+  }
+  .footer-links { display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+  .footer-links a { color: var(--slate-300); text-decoration: none; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-contact { font-size: 14px; line-height: 1.8; text-align: right; }
+  .footer-contact a { color: var(--slate-300); text-decoration: none; }
+  .footer-contact a:hover { color: var(--white); }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    nav { display: none; }
+    .nav-toggle { display: block; }
+    nav.open {
+      display: flex;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      flex-direction: column;
+      gap: 0;
+      padding: 8px var(--container-pad) 16px;
+      box-shadow: var(--shadow-md);
+      z-index: 20;
+    }
+    nav.open a { padding: 12px 0; border-bottom: 1px solid var(--color-border-default); }
+    .hero { flex-direction: column; padding-top: 40px; }
+    .hero-copy p { max-width: 100%; }
+    .hero-visual { order: -1; flex: none; }
+    .hero-mark { width: 160px; height: 160px; }
+    .hero-mark span { font-size: 32px; }
+    .pathway-steps { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .about-inner { flex-direction: column; }
+    .about-stats { width: 100%; }
+    .contact-inner { flex-direction: column; }
+    .contact-form-card { flex: 1 1 auto; width: 100%; }
+    .footer-inner { flex-direction: column; }
+    .footer-contact { text-align: left; }
+    section { padding: 48px var(--container-pad); }
+    .hero h1 { font-size: 38px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#top" class="logo">Clear<span>Church Consulting</span></a>
+  <nav id="nav">
+    <a href="#pathway">Approach</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-copy">
+    <div class="eyebrow">Next Steps for Making Disciples</div>
+    <h1>Clarity for your church's next chapter</h1>
+    <p>We walk alongside pastors and leadership teams to build a shared vision and a clear pathway for making disciples — from macro strategy down to small groups and micro groups — grounded in relationship, not a template.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Schedule a call</a>
+      <a href="#pathway" class="btn btn-outline">Our approach</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-mark"><span>Clear</span></div>
+  </div>
+</section>
+
+<section class="pathway" id="pathway">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="eyebrow">The Pathway</div>
+      <h2>From macro strategy to micro groups</h2>
+      <p>Clarity happens at every level of the church. We help you connect the big picture to the smallest gathering, so every step forward is intentional.</p>
+    </div>
+    <div class="pathway-steps">
+      <div class="pathway-step">
+        <h3>Macro Strategy</h3>
+        <p>Align your leadership around a shared vision for discipleship — one that fits your church's unique context and calling.</p>
+      </div>
+      <div class="pathway-step">
+        <h3>Small Groups</h3>
+        <p>Build a small group structure that turns strategy into practice, with clear ownership and a repeatable rhythm.</p>
+      </div>
+      <div class="pathway-step">
+        <h3>Micro Groups</h3>
+        <p>Equip leaders to shepherd micro groups where real discipleship happens — accountability, growth, and next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="eyebrow">How We Help</div>
+      <h2>Services built around your next step</h2>
+      <p>Every engagement starts with listening — to your leadership, your congregation, and where God is already at work.</p>
+    </div>
+    <div class="services-grid">
+      <div class="card">
+        <span class="tag">Assessment</span>
+        <h3>Church Health Assessment</h3>
+        <p>A guided review of your discipleship pathway, staffing, and ministry structure.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Coaching</span>
+        <h3>Leadership Coaching</h3>
+        <p>Ongoing one-on-one coaching for pastors and senior leaders navigating change.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Planning</span>
+        <h3>Strategic Planning</h3>
+        <p>A collaborative process to align your leadership around a shared vision, from macro strategy to micro groups.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-inner about-inner">
+    <div class="about-copy">
+      <div class="eyebrow">About Clear</div>
+      <h2>A partner for your leadership team</h2>
+      <p>Clear Church Consulting exists to help pastors and ministry leaders turn a big vision into clear, doable next steps. We don't hand you a generic playbook — we sit with your leadership, understand your context, and help you build a discipleship pathway that actually fits your church.</p>
+      <p>Whether you're rethinking macro strategy, launching your first small groups, or strengthening the micro groups where real life-change happens, we help you take the next step with confidence.</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat"><span class="num">Macro</span><span class="label">Vision &amp; strategy alignment</span></div>
+      <div class="stat"><span class="num">Small</span><span class="label">Group structure &amp; rhythm</span></div>
+      <div class="stat"><span class="num">Micro</span><span class="label">Leader equipping</span></div>
+      <div class="stat"><span class="num">Next</span><span class="label">A clear step forward</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial">
+  <div class="section-inner testimonial-inner">
+    <blockquote>"Clear helped our elders finally agree on where we were headed — and gave us a plan we could actually follow."</blockquote>
+    <cite>Senior Pastor, Midwest congregation</cite>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-inner contact-inner">
+    <div class="contact-copy">
+      <div class="eyebrow">Get Started</div>
+      <h2>Take the next step</h2>
+      <p>Tell us a bit about your church and we'll be in touch to schedule an introductory call — no pressure, just a conversation.</p>
+      <div class="contact-tags">
+        <span class="tag">Discipleship</span>
+        <span class="tag">Small Groups</span>
+        <span class="tag">Leadership</span>
+      </div>
+    </div>
+    <div class="contact-form-card">
+      <form id="contactForm">
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="Jamie Rivera" required>
+        </div>
+        <div class="field">
+          <label for="church">Church name</label>
+          <input type="text" id="church" name="church" placeholder="First Baptist Church" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="jamie@church.org" required>
+        </div>
+        <div class="field">
+          <label for="message">What's on your mind? (optional)</label>
+          <textarea id="message" name="message" placeholder="Where is your church in its discipleship journey?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-accent">Request a call</button>
+        <div class="form-note">We'll respond within two business days.</div>
+      </form>
+      <div class="thank-you" id="thankYou">
+        <div class="thank-you-icon">✓</div>
+        <h3>Thanks for Contacting Us</h3>
+        <p>Someone will connect with you soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Clear</div>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-contact">
+      <div><a href="mailto:andrew@clearconsulting.org">andrew@clearconsulting.org</a></div>
+      <div>&copy; 2026 Clear Church Consulting</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  var navToggle = document.getElementById('navToggle');
+  var nav = document.getElementById('nav');
+  navToggle.addEventListener('click', function () {
+    var isOpen = nav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      nav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Contact form submission (no backend — client-side confirmation only)
+  var form = document.getElementById('contactForm');
+  var thankYou = document.getElementById('thankYou');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    form.style.display = 'none';
+    thankYou.classList.add('visible');
+  });
+</script>
+
+</body>
+</html>
